@@ -12,15 +12,43 @@ const TaskListContextProvider = props => {
     }, [tasks]);
 
     function addTask(title) {
-        setTasks([...tasks, {title, id: Date.now()} ]);
+        setTasks([...tasks, {title, id: Date.now(), checked: false} ]);
         // setTasks([...tasks, {title, id: uuid()} ]);
     };
     function removeTask(id) {
         setTasks(tasks.filter(task => task.id !== id));
     };
     function clearList() { setTasks([/* empty array  */]) };
+
+    // Function change the state from false to true
+    function checkTask(id){
+        let newTasks = tasks.map( task => {
+            if(task.id === id){
+                return {
+                    ...task, 
+                    checked : !task.checked 
+                }
+            }
+            return task
+        })
+
+        setTasks(newTasks.sort( function(a) {
+            /* if(a.checked ){
+                return 1
+            } */
+            if(!a.checked){
+                return -1
+            } 
+            // return 1;
+        }    ) )
+        
+    };
+
+    
+
+
     return (
-        <TaskListContext.Provider value = {{tasks, addTask, removeTask, clearList}}>
+        <TaskListContext.Provider value = {{tasks, addTask, removeTask, clearList, checkTask}}>
             {props.children}
         </TaskListContext.Provider>
     );
