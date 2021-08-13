@@ -4,12 +4,17 @@ import {TaskListContext} from '../context/TaskListContext';
 //function addClassName(className) { task.addClass('complete') };
 function Task({task}) {
     const {removeTask} = useContext(TaskListContext);
+    const {checkTask} = useContext(TaskListContext);
    
     return (  
         <div>
             <li className='list-item'>
                 <div>
-                    <input type="checkbox" className="checker"/>
+                    <input 
+                        onClick={()=> checkTask(task.id)} 
+                        type="checkbox" 
+                        className="checker"
+                    />
                     <label>{task.title}</label>
                 </div>
                 <div>
