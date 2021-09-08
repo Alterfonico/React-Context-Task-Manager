@@ -9,7 +9,10 @@
 }
 
 .container {
-  background: linear-gradient(100deg, rgb(31, 57, 105) 50%, #2074ac 0);
+  /* background: linear-gradient(100deg, rgb(31, 57, 105) 50%, #2074ac 0); */
+  background: url("https://openclipart.org/download/307657/1538724811.svg");
+  background-size: cover;
+  background-position: center;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -18,21 +21,24 @@
 }
 
 .app-wrapper {
-  background-color: #292f38;
+  background-color: #283850;
+  /* original:  background-color: #292f38; */
   width: 25%;
-  min-width: 450px;
-  height: 600px;
+  min-width: 350px;
+  height: auto;
+  max-height: 600px;;
   padding: 30px;
   box-sizing: border-box;
-  border-radius: 5px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
   color: #ccc;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 3em;
   text-align: center;
-  margin: 50px 20px 60px 20px;
+  margin: 20px 0px 20px 0px;
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -78,41 +84,39 @@ h1 {
 }
 
 .task-input {
-  width: 350px;
-  min-width: 250px;
-  padding: 15px 10px 10px 20px;
+  width: 360px;
+  padding: 14px 10px 14px 30px;
   margin-bottom: 5px;
-  font-size: 15px;
-  color: #ccc;
-  background-color: #1d222b;
-  border: 1px solid #888;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  background-color: #b2b6be;
+  /* background-color: #1d222b; */
+  border: 0px solid #000;
   outline: none;
-  border-radius: 20px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.buttons {
-  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .btn {
-  margin: 10px;
-}
-
-.add-task-btn {
-  min-width: 100px;
+  /* background-color: #024470; */
   background-color: #2074ac;
+  width: 100px;
+  height: 35px;
+  margin: 10px;
   color: #ccc;
   border: none;
   font-size: 14px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  outline: none;
   cursor: pointer;
 }
 
 .checker {
-  background-color: #2074ac;
+  /* width: 50px;
+  height: 50px; */
+  border-radius: 50px;
+  background-color: #024470;
 }
 
 input:checked + label  {
@@ -143,31 +147,20 @@ label {
 .btn-delete i {
   font-size: 16px;
   color: #bbb;
-  margin-right: 20px;
+  margin: 0px 0px 0px 10px;
 }
 
-.btn-edit i {
+/* .btn-edit i {
   font-size: 16px;
   color: #bbb;
   margin-right: 20px;
-}
+} */
 
-.clear-btn {
-  width: 100px;
-  height: 35px;
-  background-color: #2074ac;
-  color: #ccc;
-  border: none;
-  font-size: 14px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  outline: none;
-  cursor: pointer;
-}
+
 
 .no-tasks {
   color: #777;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   margin-top: 20px;
 }
