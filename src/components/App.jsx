@@ -9,7 +9,8 @@ function App() {
         <TaskListContextProvider>
             <div className="container">
                 <div className="app-wrapper">
-                    <h1 className="header">Task Manager</h1>
+                    <h1>Today's</h1>
+                    <h3>to-do list</h3>
                     <div className="main">
                         <TaskForm />
                         <TaskList />
