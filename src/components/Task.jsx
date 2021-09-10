@@ -9,8 +9,7 @@ function Task({task}) {
         <>
             <li className='list-item'>
                 <label>
-                    <div className="chulo-custom"></div>
-                    <input type="checkbox" value="completed" className="checker" />
+                    <input type="checkbox" value="completed" className="chulo" />
                     <span>{task.title}</span>
                 </label>
                 <button onClick={() => removeTask(task.id)} className="btn-delete task-btn">
